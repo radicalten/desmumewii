@@ -1,4 +1,4 @@
-name: Wii
+name: Wii2
 on:
   push:
     branches:
