@@ -27,7 +27,7 @@ INCLUDES	:=
 #---------------------------------------------------------------------------------
 
 CFLAGS	    =   -D__BIG_ENDIAN__ -g -O3 -fsigned-char -Wall $(MACHDEP) $(INCLUDE)
-CXXFLAGS	=	$(CFLAGS)
+CXXFLAGS	=	$(CFLAGS) -std=c++11
 LDFLAGS	    =	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 
 #---------------------------------------------------------------------------------
