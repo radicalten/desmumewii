@@ -295,14 +295,12 @@ static void list_files(const char *filepath) {
 
 
 /* Set up the MBR, FAT and DIR_ENTs */
-static bool cflash_build_fat( void) {
+static bool cflash_build_fat(void) {
 	int i,j,k,l,
 		clust,numClusters,
 		clusterNum2,rootCluster;
-	int fileLevel;
 
 	numFiles  = 0;
-	fileLevel = -1;
 	maxLevel  = -1;
 	
 	files = (DIR_ENT *) malloc(MAXFILES*sizeof(DIR_ENT));
