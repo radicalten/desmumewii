@@ -7,16 +7,16 @@
 #ifdef ENABLE_PAIRED_SINGLE
 
 extern "C" {
-	void ps_MatrixMultVec4x4(register const float *matrix, register float *vecPtr);
-	void ps_MatrixMultVec3x3(register float *matrix, register float *vecPtr);
-	void ps_MatrixCopy(register float* matrixDST, register const float* matrixSRC);
-	void ps_MatrixTranslate(register float *matrix, register float *ptr);
-	void ps_MatrixScale(register float *matrix, register float *ptr);
-	void ps_MatrixMultiply(register float* matrix, register float* rightMatrix);
-	void ps_guMtxDesmumeTrans(register f32* outST, register f32* mtxCurrent,
-							  register f32* coord, register f32* inST);
-	void ps_mtx_fix2float4x4(register f32* matrix, register const f32 divisor);
-	void ps_mtx_fix2float3x4(register f32* matrix, register const f32 divisor);
+	void ps_MatrixMultVec4x4(const float *matrix, float *vecPtr);
+	void ps_MatrixMultVec3x3(float *matrix, float *vecPtr);
+	void ps_MatrixCopy(float* matrixDST, const float* matrixSRC);
+	void ps_MatrixTranslate(float *matrix, float *ptr);
+	void ps_MatrixScale(float *matrix, float *ptr);
+	void ps_MatrixMultiply(float* matrix, float* rightMatrix);
+	void ps_guMtxDesmumeTrans(f32* outST, f32* mtxCurrent,
+							f32* coord,  f32* inST);
+	void ps_mtx_fix2float4x4(f32* matrix, const f32 divisor);
+	void ps_mtx_fix2float3x4(f32* matrix, const f32 divisor);
 }
 
 #else //No paired single
