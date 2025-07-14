@@ -45,7 +45,7 @@ int read16le(u16 *Bufo, std::istream *is);
 template<typename T>
 int readle(T *Bufo, EMUFILE*is)
 {
-	CTASSERT(sizeof(T)==1||sizeof(T)==2||sizeof(T)==4||sizeof(T)==8);
+	staticassert((sizeof(T)==1||sizeof(T)==2||sizeof(T)==4||sizeof(T)==8));
 	switch(sizeof(T)) {
 		case 1: return read8le((u8*)Bufo,is);
 		case 2: return read16le((u16*)Bufo,is);
