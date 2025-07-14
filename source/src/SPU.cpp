@@ -52,12 +52,8 @@
 
 
 //static ISynchronizingAudioBuffer* synchronizer = metaspu_construct(ESynchMethod_Z);
-static ISynchronizingAudioBuffer* synchronizer = metaspu_construct(ESynchMethod_N);
+static virtual ISynchronizingAudioBuffer* synchronizer = metaspu_construct(ESynchMethod_N);
 
-class ISynchronizingAudioBuffer {
-public:
-    virtual ~ISynchronizingAudioBuffer() {}
-};
 
 SPU_struct *SPU_core = 0;
 SPU_struct *SPU_user = 0;
