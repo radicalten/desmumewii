@@ -45,6 +45,9 @@
 #include "rasterize.h"
 #include "filebrowser.h"
 
+//#include <sdcard/wiisd_io.h>
+#include <usb/usbstorage.h>
+
 
 #include "gekko_utils/usb2storage.h"
 #include "gekko_utils/mload.h"
@@ -176,8 +179,6 @@ extern "C"
 
 int main(int argc, char **argv)
 {
-	
-	
 
 //	struct armcpu_memory_iface *arm9_memio = &arm9_base_memory_iface;
 //	struct armcpu_memory_iface *arm7_memio = &arm7_base_memory_iface;
