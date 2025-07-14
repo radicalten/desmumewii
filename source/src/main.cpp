@@ -46,7 +46,7 @@
 #include "filebrowser.h"
 
 //#include <sdcard/wiisd_io.h>
-#include <usb/usbstorage.h>
+#include <ogc/usbstorage.h>
 
 
 #include "gekko_utils/usb2storage.h"
