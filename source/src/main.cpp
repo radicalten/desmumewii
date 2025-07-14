@@ -172,12 +172,12 @@ static bool FindIOS(u32 ios)
 extern "C"
 #endif
 
+OurSD;
+OurUSB;
+
 int main(int argc, char **argv)
 {
-
-	OurSD;
 	OurSD.Mount();
-	OurUSB;
 	OurUSB.Startup();
 	OurUSB.Mount();
 
