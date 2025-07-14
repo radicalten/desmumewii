@@ -2401,7 +2401,7 @@ static INLINE void GPU_RenderLine_MasterBrightness(NDS_Screen * screen, u16 l)
 		// Disabled
 		case 0:
 			break;
-	} // added 
+	} }// added 
 /*
 		// Bright up
 		case 1:
