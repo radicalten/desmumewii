@@ -46,7 +46,7 @@ static int const per_page = 16;
 
 typedef struct {
 	char title[255];
-	char path[MAXNAMLEN];
+	char path[MAX_PATH];
 } file_browser_st;
 
 static void clear_console(){
@@ -94,14 +94,14 @@ static ret_action textFileBrowser(file_browser_st *file_struct){
 		
 		u32 tdirNameLen = strlen(tdir->d_name);
 
-		if(MAXNAMLEN - pathLen - tdirNameLen <= 0){
+		if(MAX_PATH - pathLen - tdirNameLen <= 0){
 			continue; // TOO LONG!
 			// Print an error?
 		}
 		
-		char filename[MAXNAMLEN];
+		char filename[MAX_PATH];
 		char div = '/';
-		memset(filename, 0, MAXNAMLEN);
+		memset(filename, 0, MAX_PATH);
 		
 		// We have to pass the entire filepath to the stat function
 		strncat(filename, file_struct->path, pathLen);
