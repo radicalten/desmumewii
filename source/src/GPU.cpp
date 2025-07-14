@@ -2489,6 +2489,7 @@ void GPU::update_winh(int WIN_NUM)
 	if(WIN_NUM==0 && !WIN0_ENABLED) return;
 	if(WIN_NUM==1 && !WIN1_ENABLED) return;
 
+	assert(WIN_NUM >= 0 && WIN_NUM < 2);
 	need_update_winh[WIN_NUM] = false;
 	u16 startX,endX;
 
