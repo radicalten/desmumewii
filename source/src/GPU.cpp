@@ -2428,7 +2428,7 @@ static INLINE void GPU_RenderLine_MasterBrightness(NDS_Screen * screen, u16 l)
 			{
 				for(i16 = 0; i16 < 256; ++i16)
 				{
-					u16 color = dst16[i16];
+					u16 color = dst[i16];
    	 				u16 index = color & 0x7FFF;
 					assert(index < 0x8000);
 					assert(factor < 17);
