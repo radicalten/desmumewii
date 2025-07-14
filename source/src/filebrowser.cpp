@@ -94,14 +94,14 @@ static ret_action textFileBrowser(file_browser_st *file_struct){
 		
 		u32 tdirNameLen = strlen(tdir->d_name);
 
-		if(MAXPATHLEN - pathLen - tdirNameLen <= 0){
+		if(MAXNAMLEN - pathLen - tdirNameLen <= 0){
 			continue; // TOO LONG!
 			// Print an error?
 		}
 		
-		char filename[MAXPATHLEN];
+		char filename[MAXNAMLEN];
 		char div = '/';
-		memset(filename, 0, MAXPATHLEN);
+		memset(filename, 0, MAXNAMLEN);
 		
 		// We have to pass the entire filepath to the stat function
 		strncat(filename, file_struct->path, pathLen);
