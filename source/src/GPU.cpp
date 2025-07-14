@@ -2401,7 +2401,8 @@ static INLINE void GPU_RenderLine_MasterBrightness(NDS_Screen * screen, u16 l)
 		// Disabled
 		case 0:
 			break;
-
+	} // added 
+/*
 		// Bright up
 		case 1:
 		{
@@ -2445,6 +2446,7 @@ static INLINE void GPU_RenderLine_MasterBrightness(NDS_Screen * screen, u16 l)
 	 }
 
 }
+*/
 
 template<int WIN_NUM>
 FORCEINLINE void GPU::setup_windows()
