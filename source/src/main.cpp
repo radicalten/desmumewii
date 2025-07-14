@@ -179,7 +179,6 @@ int main(int argc, char **argv)
 	
 	if (!fatInitDefault()) {
 		printf("fatInitDefault failure: terminating\n");
-		goto error;
 	}
 
 //	struct armcpu_memory_iface *arm9_memio = &arm9_base_memory_iface;
@@ -848,23 +847,6 @@ bool CheckBios(bool device){
 	biosfile = 0;
 
 	CommonSettings.UseExtBIOS = true;
-
-error:
-	while(1) {
-
-		// Call WPAD_ScanPads each loop, this reads the latest controller states
-		WPAD_ScanPads();
-
-		// WPAD_ButtonsDown tells us which buttons were pressed in this loop
-		// this is a "one shot" state which will not fire again until the button has been released
-		u32 pressed = WPAD_ButtonsDown(0);
-
-		// We return to the launcher application via exit
-		if ( pressed & WPAD_BUTTON_HOME ) exit(0);
-
-		// Wait for the next frame
-		VIDEO_WaitVSync();
-	}
 	
 	return true;
 }
