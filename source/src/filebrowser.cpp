@@ -46,7 +46,7 @@ static int const per_page = 16;
 
 typedef struct {
 	char title[255];
-	char path[MAXPATHLEN];
+	char path[MAXNAMLEN];
 } file_browser_st;
 
 static void clear_console(){
