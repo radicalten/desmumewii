@@ -25,6 +25,7 @@
 #include <ogc/ipc.h>
 #include "unistd.h"
 #include "ehcmodule_elf.h"
+#include <ogc/mcache.h>
 
 #define MLOAD_MLOAD_THREAD_ID	0x4D4C4400
 #define MLOAD_LOAD_MODULE		0x4D4C4480
