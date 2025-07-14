@@ -235,9 +235,7 @@ static void add_file(char *fname, FsEntry * entry, int fileLevel) {
 		} else if (fileLevel > 0) {
 			fileLink[fileLevel].filesInDir += 1;
 			strncpy((char*)&files[numFiles].name[0], "..      ", NAME_LEN);
-			files[numFiles].name[NAME_LEN - 1] = '\0';
 			strncpy((char*)&files[numFiles].ext[0], "   ", EXT_LEN);
-			files[numFiles].name[NAME_LEN - 1] = '\0';
 			fileLink[numFiles].parent = fileLevel;	
 			files[numFiles].attrib = 0x10;
 			numFiles++;
