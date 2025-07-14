@@ -143,7 +143,7 @@ private:
 	enum { BLOCKSIZE = 1 << BLOCKSIZESHIFT };
 	enum { TAGSHIFT = SIZESHIFT - ASSOCIATIVESHIFT };
 	enum { TAGMASK = (u32)(~0U << TAGSHIFT) };
-	enum { BLOCKMASK = ((u32)~0U >> (32 - TAGSHIFT)) & (u32)(~0 << BLOCKSIZESHIFT) };
+	enum { BLOCKMASK = ((u32)~0U >> (32 - TAGSHIFT)) & (u32)(~0U << BLOCKSIZESHIFT) };
 	enum { WORDSIZE = sizeof(u32) };
 	enum { WORDSPERBLOCK = (1 << BLOCKSIZESHIFT) / WORDSIZE };
 	enum { DATAPERWORD = WORDSIZE * ASSOCIATIVITY };
