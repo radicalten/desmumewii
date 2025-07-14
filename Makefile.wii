@@ -91,28 +91,19 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES), -iquote $(CURDIR)/$(dir)) \
 .PHONY: $(BUILD) clean
 
 #---------------------------------------------------------------------------------
-# build a list of library paths
-#---------------------------------------------------------------------------------
-export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
-					-L$(LIBOGC_LIB)
+all: $(BUILD)
 
-export OUTPUT	:=	$(CURDIR)/$(TARGET)
-.PHONY: $(BUILD) clean
-
-#---------------------------------------------------------------------------------
-$(BUILD):
+lib:
+	@[ -d $@ ] || mkdir -p $@
+	
+$(BUILD): lib
 	@[ -d $@ ] || mkdir -p $@
 	@$(MAKE) --no-print-directory -C $(BUILD) -f $(CURDIR)/Makefile
 
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(OUTPUT).elf $(OUTPUT).dol
-
-#---------------------------------------------------------------------------------
-run:
-	wiiload $(TARGET).dol
-
+	@rm -fr $(BUILD) lib
 
 #---------------------------------------------------------------------------------
 else
@@ -122,8 +113,11 @@ DEPENDS	:=	$(OFILES:.o=.d)
 #---------------------------------------------------------------------------------
 # main targets
 #---------------------------------------------------------------------------------
-$(OUTPUT).dol: $(OUTPUT).elf
-$(OUTPUT).elf: $(OFILES)
+$(OUTPUT)	:	$(OFILES)
+
+$(OFILES_SOURCES) : $(HFILES)
+
+-include $(DEPENDS)
 
 #---------------------------------------------------------------------------------
 # This rule links in binary data with the .png extension
