@@ -225,7 +225,7 @@ void SPU_SetSynchMode(int mode, int method)
 	if(synchmethod != (ESynchMethod)method)
 	{
 		synchmethod = (ESynchMethod)method;
-		delete synchronizer;
+		// delete synchronizer;
 		//grr does this need to be locked? spu might need a lock method
 		  // or maybe not, maybe the platform-specific code that calls this function can deal with it.
 		synchronizer = metaspu_construct(synchmethod);
