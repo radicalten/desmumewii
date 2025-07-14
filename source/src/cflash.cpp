@@ -277,7 +277,7 @@ static void list_files(const char *filepath) {
 
 		if ((entry.flags & FS_IS_DIR) && (strcmp(fname, ".")) && (strcmp(fname, ".."))) {
 			if (strlen(fname)+strlen(filepath)+2 < 256) {
-				snprintf(SubDir, "%s%c%s", filepath, FS_SEPARATOR, fname);
+				sprintf(SubDir, "%s%c%s", filepath, FS_SEPARATOR, fname);
 				list_files(SubDir);
 			}
 		}
