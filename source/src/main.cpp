@@ -182,6 +182,16 @@ public:
         return fatInitDefault(); // or whatever your library uses
     }
 };
+
+	class USB {
+public:
+    bool Startup() {
+        return USBStorage_Startup(); // returns true if successful
+    }
+    bool Mount() {
+        return fatMountSimple("usb", &__io_usbstorage); // returns true if successful
+    }
+};
 	
 	OurSD.Mount();
 	OurUSB.Startup();
