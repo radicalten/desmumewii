@@ -176,14 +176,14 @@ extern "C"
 
 int main(int argc, char **argv)
 {
-	class SD {
+	class OurSD {
 public:
     bool Mount() {
         return fatInitDefault(); // or whatever your library uses
     }
 };
 
-	class USB {
+	class OurUSB {
 public:
     bool Startup() {
         return USBStorage_Startup(); // returns true if successful
