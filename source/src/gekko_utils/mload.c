@@ -25,7 +25,6 @@
 #include <ogc/ipc.h>
 #include "unistd.h"
 #include "ehcmodule_elf.h"
-#include <ogc/mcache.h>
 
 #define MLOAD_MLOAD_THREAD_ID	0x4D4C4400
 #define MLOAD_LOAD_MODULE		0x4D4C4480
@@ -43,6 +42,8 @@
 #define MLOAD_SET_ES_IOCTLV		0x4D4C44B0
 
 #define getbe32(x) ((adr[x]<<24) | (adr[x+1]<<16) | (adr[x+2]<<8) | (adr[x+3]))
+
+extern void iosDestroyHeap(int hid);
 
 typedef struct
 {
