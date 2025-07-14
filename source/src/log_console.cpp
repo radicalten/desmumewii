@@ -40,13 +40,13 @@ static u16 log_next = 0;
 static bool log_active = true;
 static bool video_active = true;
  
-static int __out_write(struct _reent *r, int fd, const char *ptr, size_t len) {
+static int __out_write(struct _reent *r, void* fd, const char *ptr, size_t len) {
 	 
 	if (!ptr || len <= 0)
 		return -1;
 	 
 	if (video_active) {
-		dot_video->write_r(r, (void*)(uintptr_t)fd, ptr, len);
+		dot_video->write_r(r, fd, ptr, len);
 	} else {
 		if (log_active) {
 			u16 l = (log_next + 1) % log_size;
