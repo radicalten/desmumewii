@@ -2428,6 +2428,8 @@ static INLINE void GPU_RenderLine_MasterBrightness(NDS_Screen * screen, u16 l)
 			{
 				for(i16 = 0; i16 < 256; ++i16)
 				{
+					assert(index < 0x8000);
+					assert(factor < 17);
 					((u16*)dst)[i16] = fadeOutColors[factor][((u16*)dst)[i16]&0x7FFF];
 				}
 			}
