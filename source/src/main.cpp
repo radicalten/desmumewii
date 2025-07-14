@@ -176,6 +176,12 @@ extern "C"
 
 int main(int argc, char **argv)
 {
+	class SD {
+public:
+    bool Mount() {
+        return fatInitDefault(); // or whatever your library uses
+    }
+};
 	
 	OurSD.Mount();
 	OurUSB.Startup();
