@@ -434,7 +434,7 @@ char (*BLAHBLAHBLAH( UNALIGNED T (&)[N] ))[N];
 //---------------------------
 
 #ifndef CTASSERT
-#define	CTASSERT(x)		typedef char __assert ## y[(x) ? 1 : -1]
+#define CTASSERT(x) typedef char __assertion_at_line_##__LINE__[(x) ? 1 : -1]
 #endif
 
 static const char hexValid[23] = {"0123456789ABCDEFabcdef"};
