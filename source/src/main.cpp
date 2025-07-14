@@ -175,9 +175,9 @@ extern "C"
 int main(int argc, char **argv)
 {
 
-	EIO::SD OurSD;
+	SD OurSD;
 	OurSD.Mount();
-	EIO::USB OurUSB;
+	USB OurUSB;
 	OurUSB.Startup();
 	OurUSB.Mount();
 
