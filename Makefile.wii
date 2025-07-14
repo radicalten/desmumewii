@@ -26,8 +26,8 @@ INCLUDES	:=
 # options for code generation
 #---------------------------------------------------------------------------------
 
-CFLAGS	    =  -std=c++11 -D__BIG_ENDIAN__ -g -O3 -fsigned-char -Wall $(MACHDEP) $(INCLUDE)
-CXXFLAGS	=	$(CFLAGS)
+CFLAGS	    =  -D__BIG_ENDIAN__ -g -O3 -fsigned-char -Wall $(MACHDEP) $(INCLUDE)
+CXXFLAGS    = -std=c++11 $(CFLAGS)
 LDFLAGS	    =	-g $(MACHDEP) -Wl,-Map,$(notdir $@).map
 
 #---------------------------------------------------------------------------------
