@@ -138,6 +138,7 @@ int getExtId(const char *szFilePath) {
 			}
 		}
 	}
+	}
 
 	return EXT_UNKNOWN;
 }
