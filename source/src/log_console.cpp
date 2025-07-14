@@ -46,7 +46,7 @@ static int __out_write(struct _reent *r, int fd, const char *ptr, size_t len) {
 		return -1;
 	 
 	if (video_active) {
-		dot_video->write_r(r, fd, ptr, len);
+		dot_video->write_r(r, (void*)(uintptr_t)fd, ptr, len);
 	} else {
 		if (log_active) {
 			u16 l = (log_next + 1) % log_size;
