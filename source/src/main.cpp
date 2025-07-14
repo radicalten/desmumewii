@@ -177,6 +177,11 @@ extern "C"
 int main(int argc, char **argv)
 {
 	
+	if (!fatInitDefault()) {
+		printf("fatInitDefault failure: terminating\n");
+		goto error;
+	}
+
 //	struct armcpu_memory_iface *arm9_memio = &arm9_base_memory_iface;
 //	struct armcpu_memory_iface *arm7_memio = &arm7_base_memory_iface;
 //	struct armcpu_ctrl_iface *arm9_ctrl_iface;
