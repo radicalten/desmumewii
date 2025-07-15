@@ -8,7 +8,7 @@
 #include "Gecko.h"
 #include "Tools.h"
 #include "System.h"
-#include "svnrev.h"
+//#include "svnrev.h"
 
 u32* Video::FrontBuffer = NULL;
 GXRModeObj *Video::VMode = NULL;
@@ -243,7 +243,7 @@ void Video::Initialize()
 	printf("%*s", Console::Cols, " ");
 
 	char text[Console::Cols];
-	sprintf(text, "DOP-Mii v%s (SVN r%s)", ProgramVersion, SVN_REV_STR);
+	//sprintf(text, "DOP-Mii v%s (SVN r%s)", ProgramVersion, SVN_REV_STR);
 	Console::PrintCenter(Console::Cols, text);
 
 	printf("%*s", Console::Cols, " ");	
