@@ -2942,7 +2942,7 @@ static char * OP_LDMDB2_W(u32 adr, u32 i, char * txt)
 	char temp[256]; // or whatever size is appropriate
 	strncpy(temp, txt, sizeof(temp));
 	temp[sizeof(temp) - 1] = '\0'; // ensure null-termination
-     	if(BIT15(i)==0) sprintf(txt, "%s ?????", txt);
+     	if(BIT15(i)==0) sprintf(txt, "%s ?????", temp);
 	return txt;}
 
 //------------------------------STM----------------------------------
