@@ -12,7 +12,7 @@
 #include "Gecko.h"
 #include "Nand.h"
 //#include "Network.h"
-#include "svnrev.h"
+//#include "svnrev.h"
 #include "FileSystem.h"
 #include "Global.h"
 #include "Settings.h"
