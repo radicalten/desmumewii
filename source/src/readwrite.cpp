@@ -106,7 +106,7 @@ int read16le(u16 *Bufo, EMUFILE *is)
 
 int read64le(u64 *Bufo, EMUFILE *is)
 {
-	u64 buf;
+	u64 buf = 0;
 	if(is->_fread((char*)&buf,8) != 8)
 		return 0;
 #ifdef LOCAL_LE
