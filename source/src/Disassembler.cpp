@@ -2922,7 +2922,7 @@ static char * OP_LDMIA2_W(u32 adr, u32 i, char * txt)
 	strncpy(temp, txt, sizeof(temp));
 	temp[sizeof(temp) - 1] = '\0'; // ensure null-termination
 	
-     if(BIT15(i)==0) sprintf(txt, "%s ?????", txt);
+     if(BIT15(i)==0) sprintf(txt, "%s ?????", temp);
 return txt;}
 
 static char * OP_LDMIB2_W(u32 adr, u32 i, char * txt)
@@ -2934,7 +2934,7 @@ static char * OP_LDMIB2_W(u32 adr, u32 i, char * txt)
 	strncpy(temp, txt, sizeof(temp));
 	temp[sizeof(temp) - 1] = '\0'; // ensure null-termination
 	
-     if(BIT15(i)==0) sprintf(txt, "%s ?????", txt);
+     if(BIT15(i)==0) sprintf(txt, "%s ?????", temp);
 return txt;}
 
 static char * OP_LDMDA2_W(u32 adr, u32 i, char * txt)
