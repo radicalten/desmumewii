@@ -51,7 +51,7 @@ void System::ShutdownDevices()
 	WPAD_Shutdown();
 
 	//gprintf("Shutting Down Network\n"); 
-	Network::ShutDown();
+	//Network::ShutDown();
 
 	//gprintf("\nShutting Down SD\n"); 
 	SD::Unmount();
@@ -111,13 +111,13 @@ void System::Initialize()
 {
     /* Initialize video subsytem */
 	InitGecko(); 
-	gprintf("\n\nDOP-Mii (r%s)\n", SVN_REV_STR);
+	//gprintf("\n\nDOP-Mii (r%s)\n", SVN_REV_STR);
 	gprintf("Initializing Wii\n");
 	gprintf("VideoInit\n"); Video::Initialize();
     gprintf("PAD_Init\n"); PAD_Init();
 	gprintf("WPAD_Init\n"); WPAD_Init();	
 	USB::Startup(); // Wake Up USB Drive
-	Settings::Instance().Load();
+	//Settings::Instance().Load();
 
     /* Set RESET/POWER button callback */
 	WPAD_SetPowerButtonCallback((WPADShutdownCallback)PowerCallback);
