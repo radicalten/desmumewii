@@ -647,7 +647,7 @@ static u16 fread_buffered(int dirent,u32 cluster,u32 offset)
 	if (activeDirEnt != -1)
 		fclose(hFile);
 
-	strncpy(fpath,sFlashPath.c_str(),ARRAY_SIZE(fpath)+1);
+	strncpy(fpath,sFlashPath.c_str(),ARRAY_SIZE(fpath));
 	strncat(fpath,DIR_SEP,ARRAY_SIZE(fpath)-strlen(fpath));
 
 	resolve_path(dirent);
