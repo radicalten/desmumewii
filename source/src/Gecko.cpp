@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdarg.h>
 #include "Gecko.h"
-#include "BuildType.h"
+//#include "BuildType.h"
 
 extern  "C"
 {
