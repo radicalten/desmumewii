@@ -134,7 +134,7 @@ void DebugStatistics::printSequencerExecutionCounters()
 void DEBUG_reset()
 {
 	DEBUG_statistics = DebugStatistics();
-	(void)&DebugStatistics::print;
+	printf("DEBUG_reset: referenced DebugStatistics::print\n");
 }
 
 static void defaultCallback(const Logger& logger, const char * message) {
