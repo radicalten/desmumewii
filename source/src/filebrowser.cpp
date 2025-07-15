@@ -106,7 +106,7 @@ static ret_action textFileBrowser(file_browser_st *file_struct){
 		// We have to pass the entire filepath to the stat function
 		strncat(filename, file_struct->path, pathLen);
 		// Add in the divider
-		strncat(filename, &div, 1);
+		strncat(filename, &div, 2);
 		// ...And the name
 		strncat(filename, tdir->d_name, tdirNameLen);
 		
