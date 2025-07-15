@@ -333,7 +333,7 @@ bool CFIRMWARE::load()
 	u32 size = 0;
 	u8	*data = NULL;
 	u16 shift1 = 0, shift2 = 0, shift3 = 0, shift4 = 0;
-	u32 part1addr = 0, part2addr = 0, part3addr = 0, part4addr = 0, part5addr = 0;
+	u32 part1addr = 0, part2addr = 0;
 	u32 part1ram = 0, part2ram = 0;
 	
 	u32	src = 0;
