@@ -15,7 +15,7 @@
 //#include "svnrev.h"
 #include "FileSystem.h"
 #include "Global.h"
-#include "Settings.h"
+//#include "Settings.h"
 
 using namespace IO;
 
