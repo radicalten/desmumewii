@@ -191,7 +191,10 @@ static ret_action textFileBrowser(file_browser_st *file_struct){
 			if(index == 0 && strcmp(dir[index].name, "..") == 0) {
 				browse_back(file_struct->path);
 			}else{
-				sprintf(file_struct->path, "%s/%s", file_struct->path, dir[index].name);
+				char temp[1024];
+				strncpy(temp, file_struct->path, sizeof(temp) - 1);
+				temp[sizeof(temp) - 1] = '\0'; // Ensure null termination
+				snprintf(file_struct->path, sizeof(file_struct->path), "%s/%s", temp, dir[index].name);
 			}
 
 			BOOL is_dir = (dir[index].attr & S_IFDIR);
