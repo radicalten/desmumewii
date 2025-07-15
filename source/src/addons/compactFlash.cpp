@@ -248,7 +248,7 @@ static void add_file(char *fname, FsEntry * entry, int fileLevel)
 // List all files and subdirectories recursively
 static void list_files(const char *filepath)
 {
-	char DirSpec[255+1], SubDir[255+1];
+	char DirSpec[255+1], SubDir[511+1];
 	FsEntry entry;
 	void * hFind;
 	char *fname;
