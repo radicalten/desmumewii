@@ -7,9 +7,9 @@
 #include "System.h"
 #include "SysTitle.h"
 #include "Patcher.h"
-#include "SM_ticket_dat.h"
-#include "SU_ticket_dat.h"
-#include "SU_tmd_dat.h"
+//#include "SM_ticket_dat.h"
+//#include "SU_ticket_dat.h"
+//#include "SU_tmd_dat.h"
 
 using namespace IO;
 
