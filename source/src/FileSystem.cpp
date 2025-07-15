@@ -179,7 +179,7 @@ namespace IO
 
 		strlcpy(dir, fullpath, sizeof(dir));
 		len = strlen(dir);
-		if (len && len< sizeof(dir)-2 && dir[len-1] != '/');
+		if (len && len< sizeof(dir)-2 && dir[len-1] != '/')
 		{
 			dir[len++] = '/';
 			dir[len] = '\0';
