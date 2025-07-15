@@ -2917,6 +2917,11 @@ static char * OP_LDMIA2_W(u32 adr, u32 i, char * txt)
 {
      RegList(16);
      sprintf(txt, "LDMIA%s %s!, {%s}^", Condition[CONDITION(i)], Registre[REG_POS(i,16)], lreg);
+	
+	char temp[256]; // or whatever size is appropriate
+	strncpy(temp, txt, sizeof(temp));
+	temp[sizeof(temp) - 1] = '\0'; // ensure null-termination
+	
      if(BIT15(i)==0) sprintf(txt, "%s ?????", txt);
 return txt;}
 
@@ -2924,6 +2929,11 @@ static char * OP_LDMIB2_W(u32 adr, u32 i, char * txt)
 {
      RegList(16);
      sprintf(txt, "LDMIB%s %s!, {%s}^", Condition[CONDITION(i)], Registre[REG_POS(i,16)], lreg);
+
+	char temp[256]; // or whatever size is appropriate
+	strncpy(temp, txt, sizeof(temp));
+	temp[sizeof(temp) - 1] = '\0'; // ensure null-termination
+	
      if(BIT15(i)==0) sprintf(txt, "%s ?????", txt);
 return txt;}
 
