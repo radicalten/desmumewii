@@ -30,6 +30,7 @@
 #include <wiiuse/wpad.h>
 #include <sys/dir.h>
 #include <ogc/lwp_watchdog.h>
+#include "FileSystem.h"
 // #include <dopmii/FileSystem.h>
 #include "MMU.h"
 #include "NDSSystem.h"
