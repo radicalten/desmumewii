@@ -34,7 +34,7 @@ int frameskip;
 const char *nds_file;
 const char *cflash_disk_image_file;
 
-
+/*
 // Screen layout/scale etc...
 enum {
 	SCREEN_VERT_NORMAL = 0,
@@ -58,6 +58,8 @@ float scalex, scaley;
 float width = 256;
 float height = 192;
 float rotate_angle = 0.0f;
+
+*/
 
 void DoConfig();
 
