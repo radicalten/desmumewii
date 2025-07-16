@@ -29,7 +29,7 @@
 #include <math.h>
 #include <string.h>
 #include <wiiuse/wpad.h>
-#include "FrontEnd.h"
+//#include "FrontEnd.h"
 
 
 typedef struct configparm{
