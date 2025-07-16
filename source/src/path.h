@@ -76,7 +76,7 @@ public:
 	char pathToCheats[MAX_PATH];
 	char pathToSounds[MAX_PATH];
 	char pathToFirmware[MAX_PATH];
-	char pathToModule[MAX_PATH];
+	char* pathToModule[MAX_PATH];
 	char pathToLua[MAX_PATH];
 
 	void init(const char * filename) {
