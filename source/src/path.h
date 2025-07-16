@@ -136,7 +136,7 @@ public:
 
 	void ReadPathSettings()
 	{
-		if( ( strcmp(pathToModule, "") == 0) || !pathToModule)
+		if( ( strcmp(pathToModule, "") == 0))
 			LoadModulePath();
 
 		ReadKey(pathToRoms, ROMKEY);
