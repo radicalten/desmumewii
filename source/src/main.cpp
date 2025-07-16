@@ -131,6 +131,7 @@ bool CheckBios(bool);
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 
+/*
 #ifdef HW_RVL
 static bool FindIOS(u32 ios)
 {
@@ -169,7 +170,7 @@ static bool FindIOS(u32 ios)
 	free(titles); 
 	return false;
 }
-#endif
+#endif */
 
 #ifdef __cplusplus
 extern "C"
