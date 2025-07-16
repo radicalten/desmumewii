@@ -399,8 +399,9 @@ void SPU_struct::KeyOn(int channel)
 	default: break;
 	}
 
+if (thischan.format >= 0 && thischan.format < 4) {
 	thischan.double_totlength_shifted = (double)(thischan.totlength << format_shift[thischan.format]);
-
+}
 	if(thischan.format != 3)
 	{
 		if(thischan.double_totlength_shifted == 0)
